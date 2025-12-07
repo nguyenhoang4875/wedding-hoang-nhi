@@ -10,7 +10,7 @@ const Events = () => {
       location: 'Nhà Gái',
       address: 'https://maps.app.goo.gl/njkbnNF7VE9B28TN9',
       description: 'Tiệc tối kỷ niệm tại nhà gái',
-      image: '🎉'
+      image: '🥂'
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const Events = () => {
       location: 'Nhà Gái',
       address: 'https://maps.app.goo.gl/njkbnNF7VE9B28TN9',
       description: 'Tiệc cưới chính thức tại nhà gái',
-      image: '💒'
+      image: '💍'
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const Events = () => {
       location: 'Nhà Trai',
       address: 'https://maps.app.goo.gl/kMatB9YfX4wcnqLf8',
       description: 'Tiệc tối kỷ niệm tại nhà trai',
-      image: '🎉'
+      image: '🥂'
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const Events = () => {
       location: 'Nhà Trai',
       address: 'https://maps.app.goo.gl/kMatB9YfX4wcnqLf8',
       description: 'Tiệc cưới chính thức tại nhà trai',
-      image: '💒'
+      image: '💍'
     }
   ]
 
@@ -60,11 +60,11 @@ const Events = () => {
                 <h3 className="event-title">{event.title}</h3>
                 <div className="event-meta">
                   <p className="event-date">
-                    <span className="date-icon">📅</span>
+                    <span className="date-icon">◆</span>
                     {event.date}
                   </p>
                   <p className="event-time">
-                    <span className="time-icon">⏰</span>
+                    <span className="time-icon">⌚</span>
                     {event.time}
                   </p>
                 </div>
@@ -72,7 +72,7 @@ const Events = () => {
                 <a href={event.address} target="_blank" rel="noopener noreferrer" className="event-location-link">
                   <span className="location-icon">📍</span>
                   {event.location}
-                  <span className="map-icon">🗺</span>
+                  <span className="map-icon">→</span>
                 </a>
               </div>
             </div>

@@ -9,7 +9,7 @@ const Couple = () => {
         <div className="couple-content">
           <div className="groom-card">
             <div className="couple-image groom-image">
-              <div className="placeholder">📷</div>
+              <img src="/src/assets/imgs/bride_groom/groom.jpg" alt="Chú rể" className="couple-photo" />
             </div>
             <div className="couple-info">
               <h3>Nguyễn Hoàng</h3>
@@ -22,12 +22,12 @@ const Couple = () => {
           </div>
 
           <div className="hearts">
-            <span className="big-heart">💕</span>
+            <span className="big-heart">♡</span>
           </div>
 
           <div className="bride-card">
             <div className="couple-image bride-image">
-              <div className="placeholder">📷</div>
+              <img src="/src/assets/imgs/bride_groom/bride.jpg" alt="Cô dâu" className="couple-photo" />
             </div>
             <div className="couple-info">
               <h3>Yến Nhi</h3>

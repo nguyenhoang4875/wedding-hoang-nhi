@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #d4a574;
-  --secondary-color: #8b7355;
-  --accent-color: #fef5e7;
-  --dark-color: #2c2c2c;
-  --light-color: #fefdfb;
+  --primary-color: #747BA9;
+  --secondary-color: #666666;
+  --accent-color: #ffffff;
+  --red-color: #747BA9;
+  --red-light: #8B92C1;
+  --dark-color: #1a1a1a;
+  --light-color: #ffffff;
   --border-radius: 10px;
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
@@ -16,12 +18,13 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Playfair Display', 'Georgia', serif;
+  font-family: 'Playfair Display', 'Segoe UI', 'Georgia', serif;
   color: var(--dark-color);
   background-color: var(--light-color);
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 .app {
@@ -38,6 +41,10 @@ body {
   letter-spacing: 1px;
   position: relative;
   padding-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--red-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-title::after {
@@ -47,7 +54,10 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
-  height: 2px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--red-light));
+  border-radius: 2px;
+}
   background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 

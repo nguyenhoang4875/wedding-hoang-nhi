@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #fefdfb 0%, #fdf8f0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +38,10 @@
   margin: 0;
   font-weight: 600;
   letter-spacing: 1px;
+  background: linear-gradient(135deg, var(--primary-color), var(--red-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .and {

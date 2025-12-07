@@ -65,9 +65,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-decoration">
-        <div className="flower flower-1">🌸</div>
-        <div className="flower flower-2">🌹</div>
-        <div className="flower flower-3">💐</div>
+        <div className="flower flower-1">✨</div>
+        <div className="flower flower-2">✧</div>
+        <div className="flower flower-3">✧</div>
       </div>
     </section>
   )

@@ -1,14 +1,44 @@
+import { useState, useEffect } from 'react'
 import '../styles/Gallery.css'
 
+interface Image {
+  id: number
+  src: string
+  title: string
+}
+
 const Gallery = () => {
-  const images = [
-    { id: 1, title: 'Ảnh 1' },
-    { id: 2, title: 'Ảnh 2' },
-    { id: 3, title: 'Ảnh 3' },
-    { id: 4, title: 'Ảnh 4' },
-    { id: 5, title: 'Ảnh 5' },
-    { id: 6, title: 'Ảnh 6' },
-  ]
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [images, setImages] = useState<Image[]>([])
+  const [showAll, setShowAll] = useState(false)
+
+  useEffect(() => {
+    // Danh sách ảnh trong folder album (Vite import tự động)
+    const imageFiles = import.meta.glob('/src/assets/imgs/album/*.{jpg,jpeg,png,JPG,JPEG,PNG}', { 
+      as: 'url',
+      eager: true 
+    })
+    
+    const loadedImages: Image[] = Object.entries(imageFiles).map((entry, index) => {
+      const [path, src] = entry as [string, string]
+      const fileName = path.split('/').pop() || `ảnh-${index + 1}`
+      
+      return {
+        id: index + 1,
+        src: src,
+        title: fileName.replace(/\.[^/.]+$/, '') // Loại bỏ extension
+      }
+    })
+    
+    setImages(loadedImages)
+  }, [])
+
+  const handleCloseModal = () => {
+    setSelectedImage(null)
+  }
+
+  // Hiển thị 9 ảnh đầu hoặc tất cả
+  const displayedImages = showAll ? images : images.slice(0, 9)
 
   return (
     <section id="gallery" className="gallery">
@@ -16,19 +46,40 @@ const Gallery = () => {
         <h2 className="section-title">Album Ảnh Của Chúng Tôi</h2>
         
         <div className="gallery-grid">
-          {images.map((image) => (
-            <div key={image.id} className="gallery-item">
-              <div className="gallery-image-placeholder">
-                <span>📷</span>
-                <p>{image.title}</p>
+          {displayedImages.length > 0 ? (
+            displayedImages.map((image) => (
+              <div key={image.id} className="gallery-item">
+                <img src={image.src} alt={image.title} className="gallery-image" />
+                <div className="gallery-overlay">
+                  <button className="view-btn" onClick={() => setSelectedImage(image.src)}>Xem chi tiết</button>
+                </div>
               </div>
-              <div className="gallery-overlay">
-                <button className="view-btn">Xem chi tiết</button>
-              </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="loading">Đang tải ảnh...</p>
+          )}
         </div>
+
+        {images.length > 9 && (
+          <div className="gallery-footer">
+            <button 
+              className={`show-all-btn ${showAll ? 'active' : ''}`}
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'Ẩn bớt' : 'Tất cả hình ảnh'}
+            </button>
+          </div>
+        )}
       </div>
+
+      {selectedImage && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={handleCloseModal}>✕</button>
+            <img src={selectedImage} alt="Full view" className="modal-image" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

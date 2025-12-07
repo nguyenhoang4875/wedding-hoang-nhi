@@ -1,7 +1,7 @@
 /* Gallery Section */
 .gallery {
   padding: 5rem 2rem;
-  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.95) 100%);
 }
 
 .gallery-container {
@@ -22,29 +22,30 @@
   box-shadow: var(--shadow);
   cursor: pointer;
   aspect-ratio: 1;
+  animation: slideInUp 0.6s ease-out backwards;
 }
 
-.gallery-image-placeholder {
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+.gallery-item:nth-child(7) { animation-delay: 0.7s; }
+.gallery-item:nth-child(8) { animation-delay: 0.8s; }
+.gallery-item:nth-child(9) { animation-delay: 0.9s; }
+
+.gallery-image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
   transition: var(--transition);
-  position: relative;
-  z-index: 1;
+  animation: zoomIn 0.8s ease-out;
 }
 
-.gallery-image-placeholder span {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.gallery-image-placeholder p {
-  color: white;
-  font-size: 1.1rem;
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1.1);
 }
 
 .gallery-overlay {
@@ -67,8 +68,8 @@
 }
 
 .view-btn {
-  background: var(--accent-color);
-  color: var(--secondary-color);
+  background: var(--red-color);
+  color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -78,13 +79,164 @@
 }
 
 .view-btn:hover {
-  background: white;
+  background: var(--red-light);
   transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(116, 123, 169, 0.3);
 }
 
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+  }
+}
+
+/* Gallery Footer & Button */
+.gallery-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.show-all-btn {
+  background: var(--red-color);
+  color: white;
+  border: 2px solid var(--red-color);
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.show-all-btn:hover {
+  background: transparent;
+  color: var(--red-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(116, 123, 169, 0.3);
+}
+
+.show-all-btn.active {
+  background: transparent;
+  color: var(--red-color);
+  border-color: var(--red-color);
+}
+
+.show-all-btn.active:hover {
+  background: var(--red-color);
+  color: white;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  animation: slideIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: var(--red-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: var(--red-light);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(116, 123, 169, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px) rotateX(15deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-close {
+    top: -50px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .modal-image {
+    border-radius: 5px;
   }
 }
