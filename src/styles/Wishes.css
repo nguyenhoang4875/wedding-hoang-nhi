@@ -1,0 +1,56 @@
+/* Wishes Section */
+.wishes {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, rgba(244, 230, 211, 0.5) 0%, rgba(212, 165, 165, 0.1) 100%);
+}
+
+.wishes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.wish-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+}
+
+.wish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wish-header h4 {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.wish-message {
+  color: #666;
+  line-height: 1.8;
+  font-style: italic;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.no-wishes {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 3rem;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .wishes-grid {
+    grid-template-columns: 1fr;
+  }
+}

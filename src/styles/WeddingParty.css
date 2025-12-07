@@ -1,0 +1,94 @@
+/* Wedding Party Section */
+.wedding-party {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.party-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.party-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.party-group {
+  flex: 1;
+  min-width: 300px;
+}
+
+.party-group h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.party-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.party-member {
+  text-align: center;
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.party-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-avatar {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.party-divider {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .party-content {
+    gap: 1rem;
+  }
+
+  .party-divider {
+    transform: rotate(90deg);
+    width: 100%;
+  }
+
+  .party-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .member-avatar {
+    font-size: 2rem;
+  }
+}
