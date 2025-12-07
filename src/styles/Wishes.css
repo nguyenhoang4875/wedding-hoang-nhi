@@ -9,6 +9,93 @@
   margin: 0 auto;
 }
 
+/* Form Section */
+.wishes-form-section {
+  margin-bottom: 4rem;
+}
+
+.wishes-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wishes-form h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.wishes-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.wishes-form label {
+  display: block;
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.wishes-form input,
+.wishes-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: var(--transition);
+  resize: vertical;
+}
+
+.wishes-form input:focus,
+.wishes-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(212, 165, 165, 0.3);
+}
+
+.wishes-form .submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.wishes-form .submit-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(212, 165, 165, 0.4);
+}
+
+.wishes-form .submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Display Section */
+.wishes-display-section {
+  margin-top: 3rem;
+}
+
+.wishes-display-section h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .wishes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -22,6 +109,18 @@
   box-shadow: var(--shadow);
   transition: var(--transition);
   border-left: 4px solid var(--primary-color);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .wish-card:hover {
@@ -50,7 +149,20 @@
 }
 
 @media (max-width: 768px) {
+  .wishes {
+    padding: 3rem 1rem;
+  }
+
+  .wishes-form {
+    padding: 1.5rem;
+  }
+
   .wishes-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wishes-form input,
+  .wishes-form textarea {
+    font-size: 16px;
   }
 }

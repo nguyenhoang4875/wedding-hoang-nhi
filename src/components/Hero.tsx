@@ -10,7 +10,7 @@ const Hero = () => {
   })
 
   useEffect(() => {
-    const weddingDate = new Date('2024-12-21T00:00:00').getTime()
+    const weddingDate = new Date('2026-01-17T00:00:00').getTime()
 
     const interval = setInterval(() => {
       const now = new Date().getTime()
@@ -35,9 +35,9 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-names">
-          <h1 className="groom">Anh Tài</h1>
+          <h1 className="groom">Nguyễn Hoàng</h1>
           <span className="and">&</span>
-          <h1 className="bride">Em Linh</h1>
+          <h1 className="bride">Yến Nhi</h1>
         </div>
         <p className="hero-subtitle">Đám cưới của chúng tôi</p>
         
@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-date">
-          <p>21 Tháng 12, 2024</p>
+          <p>17 Tháng 1, 2026</p>
         </div>
       </div>
       <div className="hero-decoration">

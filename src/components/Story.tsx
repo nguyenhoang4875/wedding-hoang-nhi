@@ -14,7 +14,7 @@ const Story = () => {
               <p className="year">2020</p>
               <p>
                 Chúng tôi gặp nhau tại một sự kiện tình nguyện. Đó là một ngày nắng đẹp khi chúng tôi 
-                cùng giúp đỡ các em nhỏ. Anh Tài đã để lại cho em Linh một ấn tượng sâu sắc với nụ cười 
+                cùng giúp đỡ các em nhỏ. Nguyễn Hoàng đã để lại cho Yến Nhi một ấn tượng sâu sắc với nụ cười 
                 tươi và lòng tự trọng.
               </p>
             </div>
@@ -38,8 +38,8 @@ const Story = () => {
               <h3>Lời Cầu Hôn</h3>
               <p className="year">2023</p>
               <p>
-                Anh Tài đã chuẩn bị một bữa tối lãng mạn dưới ánh trăng trên bãi biển. Khi em Linh cắn 
-                một chiếc bánh quy, em đã phát hiện chiếc nhẫn tây. Anh Tài quỳ xuống và nói "Em yêu anh, 
+                Nguyễn Hoàng đã chuẩn bị một bữa tối lãng mạn dưới ánh trăng trên bãi biển. Khi Yến Nhi cắn 
+                một chiếc bánh quy, em đã phát hiện chiếc nhẫn tây. Nguyễn Hoàng quỳ xuống và nói "Em yêu anh, 
                 hãy cưới anh đi". Em đã vui sướng khóc.
               </p>
             </div>

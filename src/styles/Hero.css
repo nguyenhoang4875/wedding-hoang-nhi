@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 100%);
+  background: linear-gradient(135deg, #fefdfb 0%, #fdf8f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,8 @@
   font-size: 4rem;
   color: var(--primary-color);
   margin: 0;
-  font-weight: normal;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .and {
@@ -51,7 +51,7 @@
   font-size: 1.5rem;
   color: var(--secondary-color);
   margin-bottom: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .countdown {
@@ -76,7 +76,7 @@
 .countdown-number {
   font-size: 2.5rem;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .countdown-label {
@@ -92,7 +92,7 @@
 .hero-date p {
   font-size: 1.3rem;
   color: var(--secondary-color);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .hero-decoration {
@@ -107,7 +107,7 @@
 .flower {
   position: absolute;
   font-size: 3rem;
-  opacity: 0.3;
+  opacity: 0.2;
   animation: float 6s ease-in-out infinite;
 }
 

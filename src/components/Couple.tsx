@@ -12,11 +12,11 @@ const Couple = () => {
               <div className="placeholder">📷</div>
             </div>
             <div className="couple-info">
-              <h3>Anh Tài</h3>
+              <h3>Nguyễn Hoàng</h3>
               <p className="subtitle">Chú rể</p>
               <p className="bio">
                 Là một người nhiệt tình, yêu thích công việc và luôn sẵn sàng giúp đỡ mọi người. 
-                Anh luôn mơ về một gia đình hạnh phúc và bây giờ điều đó sắp trở thành hiện thực.
+                Anh luôn mơ về một gia đình hạnh phúc và bây giờ điều đó sắp trở thành hiện thực với Yến Nhi.
               </p>
             </div>
           </div>
@@ -30,11 +30,11 @@ const Couple = () => {
               <div className="placeholder">📷</div>
             </div>
             <div className="couple-info">
-              <h3>Em Linh</h3>
+              <h3>Yến Nhi</h3>
               <p className="subtitle">Cô dâu</p>
               <p className="bio">
                 Là một người tươi sáng, yêu thích gia đình và những điều nhỏ bé trong cuộc sống. 
-                Em tin rằng tình yêu đẹp nhất là sự yên bình khi ở bên người mình yêu.
+                Em tin rằng tình yêu đẹp nhất là sự yên bình khi ở bên Nguyễn Hoàng.
               </p>
             </div>
           </div>

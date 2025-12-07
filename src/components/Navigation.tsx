@@ -22,9 +22,6 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('story')} className="nav-link">Chuyện tình yêu</button>
           <button onClick={() => scrollToSection('gallery')} className="nav-link">Album ảnh</button>
           <button onClick={() => scrollToSection('events')} className="nav-link">Sự kiện</button>
-          <button onClick={() => scrollToSection('party')} className="nav-link">Phù dâu & Phù rể</button>
-          <button onClick={() => scrollToSection('wishes')} className="nav-link">Lời chúc</button>
-          <button onClick={() => scrollToSection('rsvp')} className="nav-link rsvp-btn">RSVP</button>
         </div>
         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
           <span></span>

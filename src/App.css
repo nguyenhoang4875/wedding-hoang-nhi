@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #d4a5a5;
-  --secondary-color: #8b6b6b;
-  --accent-color: #f5e6d3;
-  --dark-color: #333;
-  --light-color: #f9f7f4;
+  --primary-color: #d4a574;
+  --secondary-color: #8b7355;
+  --accent-color: #fef5e7;
+  --dark-color: #2c2c2c;
+  --light-color: #fefdfb;
   --border-radius: 10px;
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
 }
 
@@ -16,10 +16,12 @@
 }
 
 body {
-  font-family: 'Georgia', 'Playfair Display', serif;
+  font-family: 'Segoe UI', 'Playfair Display', 'Georgia', serif;
   color: var(--dark-color);
   background-color: var(--light-color);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .app {
@@ -32,8 +34,8 @@ body {
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 3rem;
-  font-weight: normal;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
   position: relative;
   padding-bottom: 1rem;
 }
@@ -44,8 +46,8 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
+  width: 80px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
