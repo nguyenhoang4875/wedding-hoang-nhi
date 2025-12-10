@@ -33,35 +33,39 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
-      <div className="hero-content">
-        <div className="hero-names">
-          <h1 className="groom">Nguyễn Hoàng</h1>
-          <span className="and">&</span>
-          <h1 className="bride">Yến Nhi</h1>
+      <div className="hero-wrapper">
+        <div className="hero-image">
+          <img src="/src/assets/imgs/album/DSC06359.JPG" alt="Wedding" className="hero-img" />
         </div>
-        <p className="hero-subtitle">Đám cưới của chúng tôi</p>
-        
-        <div className="countdown">
-          <div className="countdown-item">
-            <span className="countdown-number">{countdown.days}</span>
-            <span className="countdown-label">Ngày</span>
+        <div className="hero-content">
+          <p className="hero-subtitle">Save The Date</p>
+          <div className="hero-names">
+            <h1 className="groom">Nguyễn Hoàng</h1>
+            <h1 className="bride">Yến Nhi</h1>
           </div>
-          <div className="countdown-item">
-            <span className="countdown-number">{countdown.hours}</span>
-            <span className="countdown-label">Giờ</span>
+          
+          <div className="countdown">
+            <div className="countdown-item">
+              <span className="countdown-number">{countdown.days}</span>
+              <span className="countdown-label">Ngày</span>
+            </div>
+            <div className="countdown-item">
+              <span className="countdown-number">{countdown.hours}</span>
+              <span className="countdown-label">Giờ</span>
+            </div>
+            <div className="countdown-item">
+              <span className="countdown-number">{countdown.minutes}</span>
+              <span className="countdown-label">Phút</span>
+            </div>
+            <div className="countdown-item">
+              <span className="countdown-number">{countdown.seconds}</span>
+              <span className="countdown-label">Giây</span>
+            </div>
           </div>
-          <div className="countdown-item">
-            <span className="countdown-number">{countdown.minutes}</span>
-            <span className="countdown-label">Phút</span>
-          </div>
-          <div className="countdown-item">
-            <span className="countdown-number">{countdown.seconds}</span>
-            <span className="countdown-label">Giây</span>
-          </div>
-        </div>
 
-        <div className="hero-date">
-          <p>17 Tháng 1, 2026</p>
+          <div className="hero-date">
+            <p>17 Tháng 1, 2026</p>
+          </div>
         </div>
       </div>
       <div className="hero-decoration">

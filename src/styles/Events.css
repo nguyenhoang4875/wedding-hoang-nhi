@@ -45,25 +45,44 @@
 
 .event-image {
   width: 100%;
-  height: 220px;
-  background: linear-gradient(135deg, rgba(201, 184, 160, 0.9), rgba(155, 139, 126, 0.8));
+  height: 280px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  background: #f0f0f0;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.05);
+}
+
+.event-card:nth-child(3) .event-img {
+  transform: scale(1.2) translateY(-15%);
 }
 
 .event-content {
-  padding: 2rem;
+  padding: 0rem 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .event-title {
   color: var(--primary-color);
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   font-weight: 600;
 }
 

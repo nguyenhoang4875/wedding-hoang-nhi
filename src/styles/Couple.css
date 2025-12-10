@@ -18,35 +18,75 @@
 
 .groom-card,
 .bride-card {
-  background: var(--light-color);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: var(--shadow);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   transition: var(--transition);
 }
 
 .groom-card:hover,
 .bride-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: none;
+  box-shadow: none;
 }
 
 .couple-image {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: var(--border-radius);
+  border-radius: 50%;
   margin-bottom: 1.5rem;
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 20px rgba(116, 123, 169, 0.2);
+  transition: var(--transition);
+  position: relative;
 }
 
 .couple-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: var(--transition);
+}
+
+.couple-overlay-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.couple-overlay-info h3 {
+  font-size: 2rem;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.couple-overlay-info .couple-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bride-image .couple-photo {
+  transform: scale(1.46) translateY(-15%);
 }
 
 .placeholder {
@@ -61,14 +101,23 @@
 .couple-info h3 {
   font-size: 2rem;
   color: var(--red-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
   font-weight: 600;
 }
 
 .couple-info .subtitle {
   color: var(--secondary-color);
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .couple-info .bio {
@@ -86,6 +135,7 @@
 
 .big-heart {
   font-size: 3rem;
+  color: red;
   animation: heartbeat 1.2s ease-in-out infinite;
 }
 

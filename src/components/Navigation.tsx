@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/Navigation.css'
+import { FaHeart } from 'react-icons/fa'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +15,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          💍 Our Wedding
+          H <FaHeart className="heart" /> N
         </div>
         <div className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <button onClick={() => scrollToSection('hero')} className="nav-link">Trang chủ</button>
