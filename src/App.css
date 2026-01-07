@@ -55,10 +55,8 @@ body {
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--red-light));
   border-radius: 2px;
 }
-  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 html {
