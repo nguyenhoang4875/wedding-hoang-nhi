@@ -19,8 +19,6 @@
 
 body {
   font-family: 'Playfair Display', 'Segoe UI', 'Georgia', serif;
-  color: var(--dark-color);
-  background-color: var(--light-color);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,14 +32,12 @@ body {
 
 .section-title {
   font-size: 3rem;
-  color: var(--primary-color);
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
   padding-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--red-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
