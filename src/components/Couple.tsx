@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../styles/Couple.css'
-import logo from '/src/assets/imgs/bride_groom/groom.jpg';
+import logo from '../assets/imgs/bride_groom/groom.jpg';
 
 const Couple = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
