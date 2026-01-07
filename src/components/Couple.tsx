@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/Couple.css'
+import logo from '/src/assets/imgs/bride_groom/groom.jpg';
 
 const Couple = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
@@ -12,7 +13,7 @@ const Couple = () => {
         <div className="couple-content">
           <div className="groom-card" onMouseEnter={() => setHoveredCard('groom')} onMouseLeave={() => setHoveredCard(null)}>
             <div className="couple-image groom-image">
-              <img src="/src/assets/imgs/bride_groom/groom.jpg" alt="Chú rể" className="couple-photo" />
+              <img src={logo} alt="Chú rể" className="couple-photo" />
               {hoveredCard === 'groom' && (
                 <div className="couple-overlay-info">
                   <h3>Nguyễn Hoàng</h3>
