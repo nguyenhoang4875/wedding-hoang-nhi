@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../styles/Couple.css'
-import logo from '/public/vite.svg';
+import logo from '/vite.svg';
 
 const Couple = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
